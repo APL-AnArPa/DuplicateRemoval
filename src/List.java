@@ -14,7 +14,7 @@ public abstract class List
 	abstract void remove(int index);
 	
 	//Prints all the element currently present in the List and also writes them in a file
-	abstract void print();
+	abstract void print(String fileName);
 }
 
 
@@ -113,7 +113,7 @@ class InputArray extends List
 	}
 
 	//Prints all the element currently present in the List and also writes them in a file
-	void print()
+	void print(String fileName)
 	{
 		//Print the elements and also write them into a file if the array is initialized
 		if(inputArray != null)
@@ -121,7 +121,7 @@ class InputArray extends List
 			try 
 			{
 				//Create a file output.txt
-				PrintWriter writer = new PrintWriter("output.txt");
+				PrintWriter writer = new PrintWriter(fileName);
 				for(int i=0; i < inputArray.length; i++)
 				{
 					//Print the elements and also write them into a file
@@ -276,7 +276,7 @@ class InputLinkedList extends List
 	}
 
 	//Prints all the element currently present in the List and also writes them in a file
-	void print()
+	void print(String fileName)
 	{
 		//Get the reference of the head of the Linked list
 		Node ref = head;
@@ -287,7 +287,7 @@ class InputLinkedList extends List
 			try 
 			{
 				//Create a file output.txt
-				PrintWriter writer = new PrintWriter("output.txt");
+				PrintWriter writer = new PrintWriter(fileName);
 				
 				//Traverse till the end of the Linked List  
 				while(ref != null)

@@ -76,7 +76,7 @@ public class MainClass
 			
 			//Printing the List after removing the 
 			//duplicate and also writing in file
-			inputList.print();
+			inputList.print(args[1]);
 		}
 		catch(Exception e)
 		{
